@@ -1,6 +1,13 @@
 {
-  "expo":{"name":"MalikFlix","slug":"malikflix","version":"1.2.0","orientation":"portrait","userInterfaceStyle":"dark",
-    "android":{"package":"com.maliktech.malikflix","adaptiveIcon":{"backgroundColor":"#080808"}},
-    "plugins":["expo-router"]
+  "expo": {
+    "name": "MalikFlix",
+    "slug": "malikflix",
+    "version": "1.2.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.maliktech.malikflix",
+      "adaptiveIcon": {"backgroundColor": "#080808"}
+    }
   }
 }

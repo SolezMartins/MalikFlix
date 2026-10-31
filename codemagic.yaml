@@ -2,27 +2,15 @@ workflows:
   malikflix-android:
     name: MalikFlix Android APK
     max_build_duration: 30
-
     environment:
-      node: 20
+      node: 20.19.4
       java: 17
-
     scripts:
       - name: Install dependencies
-        script: |
-          npm install
-          npx expo install --fix
-
+        script: npm install
       - name: Generate Android project
-        script: |
-          rm -rf android
-          npx expo prebuild --platform android --non-interactive --clean
-
-      - name: Build APK
-        script: |
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
-
+        script: npx expo prebuild --platform android --non-interactive --clean
+      - name: Build debug APK
+        script: cd android && chmod +x gradlew && ./gradlew assembleDebug --no-daemon
     artifacts:
       - android/app/build/outputs/apk/debug/app-debug.apk
